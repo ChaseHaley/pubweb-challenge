@@ -6,10 +6,18 @@ const FooterStyles = styled.div`
     height: 60px;
     display: flex;
     align-items: center;
+
     padding-left: 30px;
 
-    @media (max-width: 768px) {
-        
+    br {
+        display: none;
+    }
+
+    @media (max-width: 375px) {
+        height: 80px;
+        br {
+            display: initial;
+        }
     }
 `;
 

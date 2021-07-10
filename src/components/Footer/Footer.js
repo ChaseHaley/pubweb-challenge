@@ -4,8 +4,7 @@ import FooterStyles from './Footer.styled';
 const Footer = () => {
     return (
         <FooterStyles>
-            <p>Copyright 2020 Clayton Homes.</p>
-            <p>All Rights reserved.</p>
+            <p>Copyright 2020 Clayton Homes. <br />All Rights reserved.</p>
         </FooterStyles>
     )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import Button, { ListButtonContainer } from './ListButton.styled';
+import listings from '../../data/listings';
 
 const ListButton = ({ numItemsToDisplay, setNumItemsToDisplay }) => {
     const handleClick = () => {
@@ -8,7 +9,7 @@ const ListButton = ({ numItemsToDisplay, setNumItemsToDisplay }) => {
 
     return (
         <ListButtonContainer>
-            <Button onClick={handleClick}>Load More</Button>
+            <Button style={{ display: numItemsToDisplay >= listings.length ? 'none' : 'inherit' }} onClick={handleClick}>Load More</Button>
         </ListButtonContainer>
     )
 }
