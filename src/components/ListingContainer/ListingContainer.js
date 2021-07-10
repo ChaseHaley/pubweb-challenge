@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ListingCard from '../ListingCard/ListingCard';
 import ListingContainerStyles from './ListingContainer.styled';
 import listings from '../../data/listings';
 
-const ListingContainer = ({numItemsToDisplay}) => {
-    const listItems = listings.map((item) => <ListingCard
+const ListingContainer = ({ numItemsToDisplay, sortByPriceDescending }) => {
+    let listItems = listings.map((item) => <ListingCard
         key={item.homeName}
         imageURL={item.imageURL}
         homeName={item.homeName}
@@ -13,12 +13,9 @@ const ListingContainer = ({numItemsToDisplay}) => {
         baths={item.baths}
         sqft={item.sqft}
         isMultiSection={item.isMultiSection}
-    />);
+    />).sort((a, b) => sortByPriceDescending ? (a.props.startingPrice < b.props.startingPrice ? 1 : -1) : (a.props.startingPrice > b.props.startingPrice ? 1 : -1));
 
-    const itemsToShow = listItems.map((item, index) => {
-        if(index < numItemsToDisplay)
-            return item;
-    });
+    let itemsToShow = listItems.filter((item, index) => index < numItemsToDisplay);
 
     return (
         <ListingContainerStyles>

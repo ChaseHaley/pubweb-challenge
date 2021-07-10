@@ -20,8 +20,8 @@ const Home = () => {
                     <title>Clayton Homes | Home Listings</title>
                     <meta name="description" content="Clayton Homes Home Page" />
                 </Helmet>
-                <ListingsHeader numListings={listings.length} sortByPriceDescending={sortByPriceDescending} setSortByPriceDescending={setSortByPriceDescending}/>
-                <ListingContainer numItemsToDisplay={numItemsToDisplay} />
+                <ListingsHeader numListings={listings.length} sortByPriceDescending={sortByPriceDescending} setSortByPriceDescending={setSortByPriceDescending} />
+                <ListingContainer numItemsToDisplay={numItemsToDisplay} sortByPriceDescending={sortByPriceDescending} />
                 <ListButton numItemsToDisplay={numItemsToDisplay} setNumItemsToDisplay={setNumItemsToDisplay} />
                 <Footer />
             </HomeStyles>
