@@ -10,6 +10,7 @@ import listings from '../data/listings';
 
 const Home = () => {
     const [numItemsToDisplay, setNumItemsToDisplay] = useState(9);
+    const [sortByPriceDescending, setSortByPriceDescending] = useState(true);
 
     return (
         <HelmetProvider>
@@ -19,7 +20,7 @@ const Home = () => {
                     <title>Clayton Homes | Home Listings</title>
                     <meta name="description" content="Clayton Homes Home Page" />
                 </Helmet>
-                <ListingsHeader numListings={listings.length}/>
+                <ListingsHeader numListings={listings.length} sortByPriceDescending={sortByPriceDescending} setSortByPriceDescending={setSortByPriceDescending}/>
                 <ListingContainer numItemsToDisplay={numItemsToDisplay} />
                 <ListButton numItemsToDisplay={numItemsToDisplay} setNumItemsToDisplay={setNumItemsToDisplay} />
                 <Footer />
