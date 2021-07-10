@@ -7,6 +7,10 @@ const FooterStyles = styled.div`
     display: flex;
     align-items: center;
     padding-left: 30px;
+
+    @media (max-width: 768px) {
+        
+    }
 `;
 
 export default FooterStyles;
