@@ -7,10 +7,19 @@ const Button = styled.button`
     padding: 0.75em 4em;
     border: 0;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
 
     &:hover {
         cursor: pointer;
         background-color: #0e70cc;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+        margin: 0 30px;
+        height: 60px;
+        font-size: 5vw;
     }
 `;
 

@@ -16,7 +16,7 @@ const Home = () => {
             <Header />
             <HomeStyles>
                 <Helmet>
-                    <title>Clayton Homes</title>
+                    <title>Clayton Homes | Home Listings</title>
                     <meta name="description" content="Clayton Homes Home Page" />
                 </Helmet>
                 <ListingsHeader numListings={listings.length}/>
