@@ -9,13 +9,13 @@ const ListingContainerStyles = styled.div`
     justify-content: center;
     align-items: start;
 
-    @media (max-width: 71px) {
+    @media (max-width: 500px) {
         grid-template-columns: 1fr;
         align-items: center;
         justify-content: center;
     }
 
-    @media (max-width: 1024px) and (min-width: 71px) {
+    @media (max-width: 1024px) and (min-width: 501px) {
         grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-content: center;

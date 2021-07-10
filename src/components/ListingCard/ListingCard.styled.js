@@ -22,66 +22,29 @@ export const ListingInfo = styled.div`
 `;
 
 export const ListingName = styled.div`
-    
+    font-size: 2.25vw;
 
-    @media all and (max-width: 420px) {
-        font-size: 1.5em;
-    }
-
-    @media all and (max-width: 1200px) and (min-width: 421px) {
-        font-size: 2em;
-    }
-
-    @media all and (max-width: 2559px) and (min-width: 1201px) {
-        font-size: 2.5em;
-    }
-    
-    @media all and (min-width: 2560px) {
-        font-size: 4em;
+    @media (max-width: 500px) {
+        font-size: 6vw;
     }
 `;
 
 export const ListingPrice = styled.div`
     color: grey;
-    margin: 5px 0px;
+    margin: 3% 0px;
+    font-size: 1vw;
 
-    @media all and (max-width: 420px) {
-        font-size: 0.75em;
-    }
-
-    @media all and (max-width: 1200px) and (min-width: 421px) {
-        font-size: 1em;
-        margin: 20px 0px;
-    }
-
-    @media all and (max-width: 2559px) and (min-width: 1201px) {
-        margin: 20px 0px;
-        font-size: 1em;
-    }
-    
-    @media all and (min-width: 2560px) {
-        margin: 30px 0px;
-        font-size: 1.5em;
+    @media (max-width: 500px) {
+        font-size: 3vw;
     }
 `;
 
 export const ListingBody = styled.div`
-    @media all and (max-width: 420px) {
-        font-size: 1em;
-    }
+    font-size: 1.25vw;
 
-    @media all and (max-width: 1200px) and (min-width: 421px) {
-        font-size: 1.25em;
+    @media (max-width: 500px) {
+        font-size: 4vw;
     }
-
-    @media all and (max-width: 2559px) and (min-width: 1201px) {
-        font-size: 1.5em;
-    }
-    
-    @media all and (min-width: 2560px) {
-        font-size: 1.75em;
-    }
-
 `;
 
 export default ListingCardStyles;
