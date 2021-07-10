@@ -1,11 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 import HomeStyles from './Home.styled';
+import Header from '../components/Header/Header';
+import ListingsHeader from '../components/ListingsHeader/ListingsHeader';
+import ListingContainer from '../components/ListingContainer/ListingContainer'
+import ListButton from '../components/ListButton/ListButton';
+import Footer from '../components/Footer/Footer';
+import listings from '../data/listings';
 
 const Home = () => {
+    const [numItemsToDisplay, setNumItemsToDisplay] = useState(9);
+
     return (
-        <HomeStyles>
-            Test
-        </HomeStyles>
+        <HelmetProvider>
+            <Header />
+            <HomeStyles>
+                <Helmet>
+                    <title>Clayton Homes</title>
+                    <meta name="description" content="Clayton Homes Home Page" />
+                </Helmet>
+                <ListingsHeader numListings={listings.length}/>
+                <ListingContainer numItemsToDisplay={numItemsToDisplay} />
+                <ListButton numItemsToDisplay={numItemsToDisplay} setNumItemsToDisplay={setNumItemsToDisplay} />
+                <Footer />
+            </HomeStyles>
+        </HelmetProvider>
     )
 }
 
