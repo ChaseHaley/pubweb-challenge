@@ -5,11 +5,18 @@ const ListingContainerStyles = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: 30px;
+    margin-top: 0px;
     justify-content: center;
     align-items: start;
 
-    @media (max-width: 768px) {
+    @media (max-width: 71px) {
         grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @media (max-width: 1024px) and (min-width: 71px) {
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-content: center;
     }

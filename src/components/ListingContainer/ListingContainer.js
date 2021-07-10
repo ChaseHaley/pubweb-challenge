@@ -1,10 +1,10 @@
 import React from 'react'
-import HomeListingCard from '../HomeListingCard/HomeListingCard';
+import ListingCard from '../ListingCard/ListingCard';
 import ListingContainerStyles from './ListingContainer.styled';
 import listings from '../../data/listings';
 
 const ListingContainer = ({numItemsToDisplay}) => {
-    const listItems = listings.map((item) => <HomeListingCard
+    const listItems = listings.map((item) => <ListingCard
         key={item.homeName}
         imageURL={item.imageURL}
         homeName={item.homeName}
