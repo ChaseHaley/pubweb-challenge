@@ -1,4 +1,4 @@
-# Clayton Homes PubWeb Challenge Attempt With Razzle
+# Clayton Homes PubWeb Challenge Attempt
 
 ## How to use
 
